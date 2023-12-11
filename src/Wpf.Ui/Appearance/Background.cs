@@ -1,4 +1,4 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
+// This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
@@ -116,7 +116,7 @@ public static class Background
         //if (!UnsafeNativeMethods.RemoveWindowTitlebar(handle))
         //    return false;
 
-        if (Theme.GetAppTheme() == ThemeType.Dark)
+        if (Theme.GetAppTheme() == ThemeType.Dark || Theme.GetAppTheme() == ThemeType.CatppuccinMocha)
             UnsafeNativeMethods.ApplyWindowDarkMode(handle);
         else
             UnsafeNativeMethods.RemoveWindowDarkMode(handle);
@@ -233,8 +233,8 @@ public static class Background
         if (backgroundBrush is not SolidColorBrush)
             backgroundBrush =
                 Theme.GetAppTheme() == ThemeType.Dark
-                    ? new SolidColorBrush(Color.FromArgb(0xFF, 0x20, 0x20, 0x20))
-                    : new SolidColorBrush(Color.FromArgb(0xFF, 0xFA, 0xFA, 0xFA));
+                    ? new SolidColorBrush(Color.FromArgb(0xFF, 0x20, 0xFF, 0x20))
+                    : new SolidColorBrush(Color.FromArgb(0xFF, 0x80, 0xFF, 0x80));
 
         window.Background = (SolidColorBrush)backgroundBrush;
 
@@ -281,8 +281,8 @@ public static class Background
             if (backgroundBrush is not SolidColorBrush)
                 backgroundBrush =
                     Theme.GetAppTheme() == ThemeType.Dark
-                        ? new SolidColorBrush(Color.FromArgb(0xFF, 0x20, 0x20, 0x20))
-                        : new SolidColorBrush(Color.FromArgb(0xFF, 0xFA, 0xFA, 0xFA));
+                        ? new SolidColorBrush(Color.FromArgb(0xFF, 0x20, 0xFF, 0x20))
+                        : new SolidColorBrush(Color.FromArgb(0xFF, 0x80, 0xFF, 0x80));
 
             window.Background = (SolidColorBrush)backgroundBrush;
         }
@@ -317,7 +317,7 @@ public static class Background
             if (!UnsafeNativeMethods.IsValidWindow(singleHandle))
                 continue;
 
-            if (themeType == ThemeType.Dark)
+            if (themeType == ThemeType.Dark || themeType == ThemeType.CatppuccinMocha)
                 UnsafeNativeMethods.ApplyWindowDarkMode(singleHandle);
             else
                 UnsafeNativeMethods.RemoveWindowDarkMode(singleHandle);

@@ -1,4 +1,4 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
+// This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
@@ -60,6 +60,18 @@ public static class Theme
         {
             case ThemeType.Dark:
                 themeDictionaryName = "Dark";
+                break;
+            case ThemeType.CatppuccinLatte:
+                themeDictionaryName = "CatppuccinLatte";
+                break;
+            case ThemeType.CatppuccinMacchiato:
+                themeDictionaryName = "CatppuccinMacchiato";
+                break;
+            case ThemeType.CatppuccinFrappe:
+                themeDictionaryName = "CatppuccinFrappe";
+                break;
+            case ThemeType.CatppuccinMocha:
+                themeDictionaryName = "CatppuccinMocha";
                 break;
         }
 
@@ -238,6 +250,14 @@ public static class Theme
             AppearanceData.ApplicationTheme = ThemeType.Dark;
         else if (themeUri.Contains("highcontrast"))
             AppearanceData.ApplicationTheme = ThemeType.HighContrast;
+        else if (themeUri.Contains("latte"))
+            AppearanceData.ApplicationTheme = ThemeType.CatppuccinLatte;
+        else if (themeUri.Contains("macchiato"))
+            AppearanceData.ApplicationTheme = ThemeType.CatppuccinMacchiato;
+        else if (themeUri.Contains("frappe"))
+            AppearanceData.ApplicationTheme = ThemeType.CatppuccinFrappe;
+        else if (themeUri.Contains("mocha"))
+            AppearanceData.ApplicationTheme = ThemeType.CatppuccinMocha;
     }
 
     /// <summary>

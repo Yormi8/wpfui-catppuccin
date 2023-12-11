@@ -29,6 +29,10 @@ public class ThemesDictionary : ResourceDictionary
             {
                 ThemeType.Dark => "Dark",
                 ThemeType.HighContrast => "HighContrast",
+                ThemeType.CatppuccinLatte => "CatppuccinLatte",
+                ThemeType.CatppuccinFrappe => "CatppuccinFrappe",
+                ThemeType.CatppuccinMacchiato => "CatppuccinMacchiato",
+                ThemeType.CatppuccinMocha => "CatppuccinMocha",
                 _ => "Light"
             };
 

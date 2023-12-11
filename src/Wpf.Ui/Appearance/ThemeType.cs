@@ -1,4 +1,4 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
+// This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
@@ -28,5 +28,25 @@ public enum ThemeType
     /// <summary>
     /// High contract application theme.
     /// </summary>
-    HighContrast
+    HighContrast,
+
+    /// <summary>
+    /// Catppuccin Light application theme.
+    /// </summary>
+    CatppuccinLatte,
+
+    /// <summary>
+    /// Catppuccin Dark application theme.
+    /// </summary>
+    CatppuccinFrappe,
+
+    /// <summary>
+    /// Catppuccin Darker application theme.
+    /// </summary>
+    CatppuccinMacchiato,
+
+    /// <summary>
+    /// Catppuccin Darkest application theme.
+    /// </summary>
+    CatppuccinMocha,
 }
